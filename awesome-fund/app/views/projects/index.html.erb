@@ -2,3 +2,9 @@
 <p>Find me in app/views/projects/index.html.erb</p>
 <h1>The Home Page!</h1>
 <%= link_to "New Project", new_project_path %>
+
+<ul>
+  <% @projects.each do |project| %>
+  <li><%= project.title %></li>
+  <% end %>
+</ul>
