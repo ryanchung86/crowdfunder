@@ -6,7 +6,6 @@ class PledgesController < ApplicationController
   end
 
   def new
-    # @project
     @pledge = Pledge.new
   end
 
@@ -20,7 +19,7 @@ class PledgesController < ApplicationController
     # )
 
     if @pledge.save
-      redirect_to projects_url, alert: 'Pledge pledged!'
+      redirect_to projects_path, alert: 'Pledge pledged!'
     else
       render 'projects/show'
     end
