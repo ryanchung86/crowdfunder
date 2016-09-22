@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'projects#index'
   resources :projects
-  resources :users
+  resource :users
 
 end
