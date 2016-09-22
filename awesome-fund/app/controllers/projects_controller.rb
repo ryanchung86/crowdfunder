@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Product.find(params[:id])
+    @project = Project.find(params[:id])
   end
 
   def new
@@ -40,6 +40,6 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :description, :goal, :end_date, :user_id)
+    params.require(:project).permit(:title, :description, :goal, :end_date)
   end
 end
