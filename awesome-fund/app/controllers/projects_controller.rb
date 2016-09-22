@@ -5,6 +5,12 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+
+
+    if current_user
+      @pledge = @project.pledges.build
+    end
+
   end
 
   def new
@@ -41,6 +47,8 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
+
     params.require(:project).permit(:title, :description, :goal, :end_date, :user_id, rewards_attributes: [:benchmark, :description])
+
   end
 end
