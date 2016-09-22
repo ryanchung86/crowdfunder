@@ -2,4 +2,7 @@
 <p><%= @project.description %></p>
 <p>Goal: $<%= @project.goal %></p>
 <p>Deadline: <%= @project.end_date %></p>
+
+<p><%= link_to "Make a Pledge", new_project_pledge_path(@project, @pledge) %></p>
+
 <p><%= link_to "Back to Projects", projects_path %></p>
