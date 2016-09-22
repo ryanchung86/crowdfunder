@@ -9,7 +9,12 @@
   </head>
 
   <body>
-    <p><%= link_to 'Log In' %> | <%= link_to 'Sign Up', new_users_path %><p>
+    <% if current_user %>
+    <p><%= current_user.email %><%= link_to "Log Out", sessions_path('current'), method: :delete %></p>
+    <% else %>
+      <p><%= link_to 'Log In', new_sessions_path %> | <%= link_to 'Sign Up', new_users_path %><p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
