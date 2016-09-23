@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160923004941) do
+ActiveRecord::Schema.define(version: 20160923150353) do
 
   create_table "pledges", force: :cascade do |t|
     t.integer  "amount"
@@ -25,10 +25,14 @@ ActiveRecord::Schema.define(version: 20160923004941) do
     t.text     "description"
     t.integer  "goal"
     t.date     "end_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "user_id"
     t.integer  "total"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "rewards", force: :cascade do |t|

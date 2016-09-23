@@ -45,6 +45,13 @@
   </p>
 </div>
 
+<div class="field">
+  <p>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </p>
+</div>
+
 <h2>Rewards</h2>
 
 <%= f.fields_for :rewards, Reward.new do |reward_fields| %>

@@ -9,16 +9,17 @@
   <div class="row">
   <% @projects.each do |project| %>
 
+
   <div class="large-3 columns"><h2 class="projects"><%= link_to project.title, project %></h2>
-<ul class="list">
-    <li><%= project.description%></li>
+    <ul class="list">
+      <li><%= project.description%></li>
       <li><%= project.goal%></li>
       <li><%= project.end_date%></li>
-      <p><img src='http://lorempixel.com/g/200/200/'></img></p>
-      <ul>
+      <%= image_tag project.image.url %>
+    <ul>
 
 
-</div>
+  </div>
 
   <% end %>
   </div>
