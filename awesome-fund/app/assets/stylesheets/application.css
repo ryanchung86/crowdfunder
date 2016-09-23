@@ -19,10 +19,18 @@ body{
   background-color: #d3dbcc;
 }
 .list{
-  display: inline-block;
+  display: inline-grid;
+  align-items: baseline;
+  list-style: none;
 }
 .projects{
   font-family: fantasy;
   font-color: black;
   text-indent: 10px;
+}
+.showroom p{
+  font-size: 20px;
+}
+.name {
+  color: #364560;
 }
