@@ -32,8 +32,8 @@ class PledgesController < ApplicationController
       end
       redirect_to projects_path, alert: 'Pledge pledged!'
     else
-    ##  redirect_to new_project_pledge_path
-      render '/pledges/new'
+      redirect_to new_project_pledge_path
+    ##  render '/pledges/new'
     end
   end
 
