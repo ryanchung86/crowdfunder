@@ -33,4 +33,8 @@ body{
 }
 .name {
   color: #364560;
+  text-align: center;
+}
+.pricing{
+  max-width: 300px;
 }

@@ -30,11 +30,11 @@
   <th>Pledges for <%= @project.title %></th>
 
 <tr><% @project.pledges.each do |pledge| %></tr>
-<td><%= pledge.formatted_price %></td>
+<td>
+<%= pledge.formatted_price %>
+</td>
 </table>
 <% end %>
-
-
 
 <p>
 <% if Date.today < @project.end_date %>
@@ -44,9 +44,7 @@
 <% end %>
 </p>
 
-
   <h3>Rewards</h3>
-
   <div class="rewards">
   <% @rewards.each do |reward| %>
 
