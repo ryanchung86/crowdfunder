@@ -1,0 +1,12 @@
+<%= form_for([@project, @pledge]) do |f| %>
+
+<div class="field">
+  <p>
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount %>
+  </p>
+</div>
+
+<p><%= f.submit %></p>
+
+<% end %>
