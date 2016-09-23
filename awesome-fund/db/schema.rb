@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922224005) do
+ActiveRecord::Schema.define(version: 20160923004941) do
 
   create_table "pledges", force: :cascade do |t|
     t.integer  "amount"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160922224005) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
-    t.string   "total"
+    t.integer  "total"
   end
 
   create_table "rewards", force: :cascade do |t|
