@@ -47,6 +47,8 @@ class PledgesController < ApplicationController
   def pledge_params
     params.require(:pledge).permit(:amount)
   end
+  
+
 
   def load_project
     @project = Project.find(params[:project_id])

@@ -9,10 +9,9 @@
 
 <% @project.pledges.each do |pledge| %>
   <p>
-    <%= pledge.amount %>
+    <%= pledge.formatted_price %>
   </p>
 <% end %>
-
 
 <p><%= link_to "Make a Pledge", new_project_pledge_path(@project, @pledge) %></p>
 
