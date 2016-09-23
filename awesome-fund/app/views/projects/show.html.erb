@@ -14,6 +14,15 @@
 <% end %>
 
 
+<p>
+<% if Date.today < @project.end_date %>
+  <%= link_to "Make a Pledge", new_project_pledge_path(@project, @pledge) %>
+<% else %>
+  Deadline passed!
+<% end %>
+</p>
+
+
   <h3>Rewards</h3>
 
   <div class="rewards">
