@@ -33,6 +33,7 @@ class PledgesController < ApplicationController
       redirect_to projects_path, alert: 'Pledge pledged!'
     else
       redirect_to new_project_pledge_path
+    ##  render '/pledges/new'
     end
   end
 
@@ -47,7 +48,7 @@ class PledgesController < ApplicationController
   def pledge_params
     params.require(:pledge).permit(:amount)
   end
-  
+
 
 
   def load_project

@@ -8,6 +8,6 @@ class Pledge < ApplicationRecord
       sprintf("%.2f", price_in_dollars)
     end
 
-  validates :amount, presence: true
-
+  # validates :amount, presence: true
+  validates :amount, numericality: { only_integer: true }
 end
