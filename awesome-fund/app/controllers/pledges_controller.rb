@@ -30,9 +30,9 @@ class PledgesController < ApplicationController
         @project.total += @pledge.amount
         @project.save
       end
-      redirect_to projects_path, alert: 'Pledge pledged!'
+      redirect_to project_path(@project), alert: 'Pledge pledged!'
     else
-      redirect_to new_project_pledge_path
+      redirect_to project_path(@project)
     ##  render '/pledges/new'
     end
   end
