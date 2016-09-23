@@ -13,10 +13,12 @@
   </p>
 <% end %>
 
-<div class="rewards">
+
   <h3>Rewards</h3>
 
+  <div class="rewards">
   <% @rewards.each do |reward| %>
+
     <p>
       Pledge $<%= reward.benchmark %> or more.
     </p>
@@ -25,24 +27,29 @@
     </p>
 
   <% end %>
-</div>
+  </div>
 
-<div id="pledge-form">
 
-<%= form_for([@project, @pledge]) do |f| %>
+  <div id="pledge-form">
 
-<div class="field">
-  <p>
-    <%= f.label :amount %><br>
-    <%= f.number_field :amount %>
-  </p>
-</div>
+  <%= form_for([@project, @pledge]) do |f| %>
 
-<p><%= f.submit %></p>
+  <div class="field">
+    <p>
+      <%= f.label :amount %><br>
+      <%= f.number_field :amount %>
+    </p>
+  </div>
 
-<% end %>
+  <p><%= f.submit %></p>
 
-</div>
+  <% end %>
+
+  </div>
+
+
+
+
 
 <p><%= link_to "Make a Pledge", new_project_pledge_path(@project, @pledge) %></p>
 
