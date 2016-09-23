@@ -21,7 +21,7 @@ class PledgesController < ApplicationController
     if @pledge.save
       redirect_to projects_path, alert: 'Pledge pledged!'
     else
-      render 'projects/show'
+      render '/pledges/new'
     end
   end
 
