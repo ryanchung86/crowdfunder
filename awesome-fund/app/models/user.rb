@@ -3,4 +3,6 @@ class User < ApplicationRecord
 
   has_many :projects
   has_many :pledges
+
+  validates :email, presence: true
 end
