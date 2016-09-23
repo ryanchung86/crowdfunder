@@ -13,7 +13,13 @@
   </p>
 <% end %>
 
-<p><%= link_to "Make a Pledge", new_project_pledge_path(@project, @pledge) %></p>
+<p>
+<% if Date.today < @project.end_date %>
+  <%= link_to "Make a Pledge", new_project_pledge_path(@project, @pledge) %>
+<% else %>
+  Deadline passed!
+<% end %>
+</p>
 
 <p><%= link_to "Edit Project", edit_project_path(@project) %></p>
 
