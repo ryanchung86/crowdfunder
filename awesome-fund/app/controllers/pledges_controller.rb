@@ -24,9 +24,11 @@ class PledgesController < ApplicationController
     if @pledge.save
       if @project.total == nil
         @project.total = @pledge.amount
-        puts 'hi'
+        @project.save
+
       else
         @project.total += @pledge.amount
+        @project.save
       end
       redirect_to projects_path, alert: 'Pledge pledged!'
     else
