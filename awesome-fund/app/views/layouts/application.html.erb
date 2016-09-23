@@ -18,11 +18,17 @@
 
     <% if current_user %>
 
+
   <div class="top-bar">
       <ul class="menu">
     <li><%= current_user.email %></li>
     <li><%= link_to "Log Out", sessions_path('current'), method: :delete %></li>
+  <li><%= link_to "User Profile", users_path %></li>
 </div>
+
+
+
+
     <% else %>
 
   <div class="top-bar">
