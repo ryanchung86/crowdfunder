@@ -19,7 +19,7 @@ body{
   background-color: #d3dbcc;
 }
 .list{
-  list-style: none;
+  display: inline-block;
 }
 .projects{
   font-family: fantasy;
