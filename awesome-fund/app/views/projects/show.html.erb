@@ -2,7 +2,8 @@
 <p><%= @project.description %></p>
 <p>Goal: $<%= @project.goal %></p>
 <p>Deadline: <%= @project.end_date %></p>
-<p>Raised: <%= @project.total %>
+<p>Raised: <%= @project.total %></p>
+<p>Time Left: <%= distance_of_time_in_words(Time.now, @project.end_date) %>
 
 <h3>Pledges for <%= @project.title %></h3>
 
