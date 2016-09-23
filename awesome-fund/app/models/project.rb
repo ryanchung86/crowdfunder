@@ -3,7 +3,7 @@ class Project < ApplicationRecord
   has_many :pledges
   has_many :rewards
 
-  has_attached_file :image, default_url: "http://placekitten.com/200/200"
+  has_attached_file :image, default_url: 'http://lorempixel.com/g/200/200/'
 
   accepts_nested_attributes_for :rewards, reject_if: :all_blank
 
