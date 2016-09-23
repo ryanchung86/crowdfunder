@@ -15,3 +15,14 @@
  *= require foundation_and_overrides
 
  */
+body{
+  background-color: #d3dbcc;
+}
+.list{
+  list-style: none;
+}
+.projects{
+  font-family: fantasy;
+  font-color: black;
+  text-indent: 10px;
+}
